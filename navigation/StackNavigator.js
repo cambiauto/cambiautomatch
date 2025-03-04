@@ -10,8 +10,10 @@ import LoginScreen from "../screens/LoginScreen";
 import ModalScreen from "../screens/ModalScreen";
 import useAuth from "../hooks/useAuth";
 import MatchScreen from "../screens/MatchScreen";
-import VehicleData from "../screens/VehicleDataScreen";
+import VehicleDataScreen from "../screens/VehicleDataScreen";
 import MessageScreen from "../screens/MessageScreen";
+import ImagesDataScreen from "../screens/ImagesDataScreen";
+import VehiclePreferencesScreen from "../screens/VehiclePreferencesScreen";
 
 const Stack = createStackNavigator();
 
@@ -30,7 +32,9 @@ const StackNavigator = () => {
         <>
           {userCreated ? (
             <Stack.Group>
-              <Stack.Screen name="VehicleData" component={VehicleData} /> 
+              <Stack.Screen name="VehicleData" component={VehicleDataScreen} /> 
+              <Stack.Screen name="ImagesData" component={ImagesDataScreen} /> 
+              <Stack.Screen name="VehiclePreferences" component={VehiclePreferencesScreen} /> 
               <Stack.Screen name="Home" component={HomeScreen} />
             </Stack.Group>
           ) : (

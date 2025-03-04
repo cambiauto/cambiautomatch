@@ -5,7 +5,7 @@ import tw from "tailwind-react-native-classnames";
 import { LinearGradient } from "expo-linear-gradient";
 import { useNavigation } from "@react-navigation/native";
 
-const VehicleData = () => {
+const VehicleDataScreen = () => {
   const [vehicleType, setVehicleType] = useState("");
   const [brand, setBrand] = useState("");
   const [model, setModel] = useState("");
@@ -76,7 +76,7 @@ const VehicleData = () => {
     />
 
     {/* Botón Continuar */}
-    <TouchableOpacity style={tw`w-full mt-6`} onPress={() => navigation.navigate("Home")}>
+    <TouchableOpacity style={tw`w-full mt-6`} onPress={() => navigation.navigate("ImagesData")}>
       <LinearGradient
         colors={["#7B61FF", "#E14DFF"]}
         style={tw`rounded-lg p-3 items-center`}
@@ -88,4 +88,4 @@ const VehicleData = () => {
   );
 };
 
-export default VehicleData;
+export default VehicleDataScreen;
